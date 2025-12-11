@@ -1,0 +1,22 @@
+Task 1
+[x] Update the topology file and include all the nodes in the figure above.
+[x] Configure the network interfaces and IP addresses for every node.
+[x] Configure static routes for all hosts and routers.
+[x] Configure link characteristics (bandwidth, delay, packet loss) based on the specifications in the Figure above.
+[x] Ensure all hosts can communicate with each other.
+Task 2
+[x] Implement a client function (`tester_tcp_client()`) in the `net-tester.py` file that connects to a TCP server and continuously transmits data for bandwidth testing.
+[x] Implement a server (`tester_tcp_server()`) function in the `net-tester.py` file that listens for incoming TCP connections and receives data from clients. The server *should* handle multiple clients simultaneously.
+[x] Report the estimated bandwidth at regular intervals during the test on the client using the provided `Stat` class.
+[ ] Support the command-line arguments specified above to configure test parameters.
+Task 3
+[x] Implement the function `udp_tester_client()` to send datagrams at a specified rate from the client.
+[x] Implement the function `udp_tester_server()` which creates a UDP server measuring network performance. 
+[x] The function `udp_tester_server()` should calculate the bandwidth, jitter and packet loss metrics and report then at regular user-defined intervals using the provided `Logger` class.
+[x] Support measurement with multiple parallel clients.
+[x] Support the command-line arguments specified above to configure the test parameters.
+Task 4
+[x] Extend `udp_tester_server()` and implement code that sends ACKs (datagram ID echoed) when -a is enabled.
+[x] Extend `udp_tester_client()` to compute bandwidth, jitter and packet loss from acknowledged packets and report then at regular user-defined intervals using the provided `Logger` class.
+[x] Your implementation ignores duplicate IDs from server.
+[x] Handle KeyboardInterrupt gracefully to print final stats.
